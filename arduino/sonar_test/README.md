@@ -6,12 +6,13 @@
 | ------- | ----- |
 | +5V     | VCC   |
 | GND     | GND   |
-| 2       | Trig  |
-| 3       | Echo  |
+| 5       | Trig 1 |
+| 6       | Trig 2 |
+| 7       | Echo (via diode or)  |
 
 ## Requirements
 
-Tested with Arduino pro mini.
+Tested with Arduino diecimila with ethernet shield.
 
 Needs Ultrasonic library
 
