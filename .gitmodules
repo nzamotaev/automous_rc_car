@@ -1,3 +1,6 @@
 [submodule "arduino/Libraries/Ultrasonic"]
 	path = arduino/Libraries/Ultrasonic
 	url = git@github.com:JRodrigoTech/Ultrasonic-HC-SR04.git
+[submodule "arduino/Libraries/BasicTerm"]
+	path = arduino/Libraries/BasicTerm
+	url = git@github.com:nottwo/BasicTerm.git
