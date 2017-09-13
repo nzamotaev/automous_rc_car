@@ -4,3 +4,6 @@
 [submodule "arduino/Libraries/BasicTerm"]
 	path = arduino/Libraries/BasicTerm
 	url = git@github.com:nottwo/BasicTerm.git
+[submodule "arduino/Libraries/Troyka-IMU"]
+	path = arduino/Libraries/Troyka-IMU
+	url = https://github.com/amperka/Troyka-IMU
