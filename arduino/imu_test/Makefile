@@ -1,6 +1,7 @@
 BOARD_TAG = diecimila
-ARDUINO_LIBS = Wire
-USER_LIB_PATH = ../Libraries/Ultrasonic
+#BOARD_TAG = uno
+ARDUINO_LIBS = Wire BasicTerm Ultrasonic/Ultrasonic Troyka-IMU
+USER_LIB_PATH = ../Libraries
 ISP_PROG = dragon_isp
 ISP_PORT = usb
 

@@ -3,8 +3,8 @@
 #include <BasicTerm.h>
 
 Servo sonar_sweeper;
-Ultrasonic usonic(5,7);
-Ultrasonic usonic_r(6,7);
+Ultrasonic usonic(6,7);
+Ultrasonic usonic_r(5,7);
 BasicTerm term(&Serial);
 
 int angle = 0;

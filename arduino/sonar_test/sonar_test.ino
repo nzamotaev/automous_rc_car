@@ -9,7 +9,7 @@ BasicTerm term(&Serial);
 
 void setup() {
   // put your setup code here, to run once:
-  Serial.begin(9600);
+  Serial.begin(115200);
   term.init();
   term.set_attribute(BT_NORMAL);
   term.set_color(BT_WHITE,BT_BLACK);
