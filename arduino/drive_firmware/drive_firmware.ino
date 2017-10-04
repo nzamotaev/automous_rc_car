@@ -5,7 +5,6 @@
 #include <SPI.h>
 #include <Ethernet.h>
 #include <BasicTerm.h>
-#include "steering.h"
 
 BasicTerm term(&Serial);
 Gyroscope gyro;
@@ -18,6 +17,7 @@ EthernetServer commandserver(23);
 
 Servo sonar_sweeper;
 Servo motor_control;
+Servo steering;
 Ultrasonic usonic(5,7);
 Ultrasonic usonic_r(6,7);
 
@@ -35,8 +35,6 @@ const double compassCalibrationMatrix[3][3] = {
 
 void setup() {
   Serial.begin(115200);
-  pinMode(4, OUTPUT); //SD card disable access
-  digitalWrite(4, HIGH); //Subj
   term.init();
   term.set_attribute(BT_NORMAL);
   term.set_color(BT_WHITE, BT_BLACK);
@@ -46,12 +44,12 @@ void setup() {
       term.println(F("Failed to configure Ethernet with DHCP"));
       for(;;) ;
   }
-  steering_servo_setup();
-  steering_servo_enable(true);
   sonar_sweeper.attach(2);
   motor_control.attach(3);
+  steering.attach(4);
   sonar_sweeper.write(90);
   motor_control.write(90);
+  steering.write(90);
   statusserver.begin();
   commandserver.begin();
   gyro.begin();
@@ -93,5 +91,4 @@ void loop() {
   term.print(barometer.readTemperatureC());
   term.print('\t');
   term.println(millis() - time);
-  steering_servo_process();
 }
