@@ -7,9 +7,3 @@
 [submodule "arduino/Libraries/Troyka-IMU"]
 	path = arduino/Libraries/Troyka-IMU
 	url = https://github.com/nzamotaev/Troyka-IMU
-[submodule "arduino/Libraries/arduino-softpwm"]
-	path = arduino/Libraries/arduino-softpwm
-	url = git@github.com:Palatis/arduino-softpwm.git
-[submodule "arduino/Libraries/Arduino-PID-Library"]
-	path = arduino/Libraries/Arduino-PID-Library
-	url = git@github.com:br3ttb/Arduino-PID-Library.git
